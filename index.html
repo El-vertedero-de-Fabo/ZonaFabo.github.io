@@ -21,12 +21,28 @@
         </div>
     </div>
     </header>
+    <section class="main">
+        <video src="video.mp4" autoplay loop muted type='mp4'></video>
+        <img src="mask.jpg" class="mask">
+        <h2>Zona Fabo</h2>
+    </section>
+
+    <!--navegacion-->
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         let dayNight = document.querySelector('.dayNight')
         let menuToggle = document.querySelector('.menuToggle')
         let body = document.querySelector('body')
+
+        let navigation = document.querySelector('.navigation')
         
         dayNight.onclick=function(){
             body.classList.toggle('dark')
@@ -34,6 +50,7 @@
         }
         menuToggle.onclick=function(){
             menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
         }
     </script>
 </body>
