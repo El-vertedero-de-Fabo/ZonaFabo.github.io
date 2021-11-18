@@ -3,5 +3,35 @@
 {
     margin: 0;
     padding: 0;
-    box
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root
+{
+    --black: #333;
+    --white: #fff;
+}
+header
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+header .logo        /*edicion del logo*/
+{
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none;      
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+}
+.righSide
+{
+    display: flex;
 }
