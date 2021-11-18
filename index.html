@@ -49,7 +49,10 @@
         let body = document.querySelector('body')
 
         let navigation = document.querySelector('.navigation')
+
         
+        body.classList.toggle('dark')       /*Comienzo con el fondo negro por defecto*/
+        dayNight.classList.toggle('active')
         dayNight.onclick=function(){
             body.classList.toggle('dark')
             dayNight.classList.toggle('active')
