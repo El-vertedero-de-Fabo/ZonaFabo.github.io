@@ -181,4 +181,15 @@ header .logo        /*edicion del logo*/
     header{
         padding: 20px;
     }
+    .copyrightText
+    {
+        left: 20px;
+        bottom: 30px;
+    }
+    .sci{
+        position: absolute;
+        right: 30px;
+        left: 560px;
+        bottom: 20px;
+    }
 }
