@@ -11,6 +11,10 @@
     --black: #333;
     --white: #fff;
 }
+.dark{
+    --black: #fff;
+    --white: #333;
+}
 header
 {
     position: absolute;
@@ -96,11 +100,16 @@ header .logo        /*edicion del logo*/
     user-select: none;
     mix-blend-mode: screen;
 }
+.dark .mask{
+    filter: invert(1);
+    
+    mix-blend-mode: multiply;
+}
 .main h2{
     position: relative;
     z-index: 3;
     font-size: 10vw;
-    color: var(--white);
+    color: #fff;
     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.88);
 }
 
@@ -138,4 +147,38 @@ header .logo        /*edicion del logo*/
 .navigation li a:hover{
     background: var(--black);
     color: var(--white);
+}
+.copyrightText
+{
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    z-index: 4;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--black);
+}
+.sci{
+    position: absolute;
+    left: 50px;
+    bottom:70px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.75em;
+}
+@media (max-width: 768px)
+{
+    header{
+        padding: 20px;
+    }
 }
