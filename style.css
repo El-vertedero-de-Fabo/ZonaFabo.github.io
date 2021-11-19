@@ -123,9 +123,12 @@ header .logo
     mix-blend-mode: multiply;
 }
 .main h2{
+    font-family:Damned;
     position: relative;
     z-index: 3;
-    font-size: 10vw;
+    left: -30px;
+    bottom: 50px;
+    font-size: 5vw;
     color: #fff;
     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.88);
 }
