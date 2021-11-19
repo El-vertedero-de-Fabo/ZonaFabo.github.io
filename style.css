@@ -10,10 +10,14 @@
 {
     --black: rgb(0, 0, 0);
     --white: #fff;
+    --naranja: linear-gradient(395deg, #000000, #000000);
+    --relleno:rgba(230, 225, 225, 0.9);
 }
 .dark{
     --black: #fff;
     --white: rgb(0, 0, 0);
+    --naranja: linear-gradient(395deg, #fffefb, #ffffff);
+    --relleno:rgba(0, 0, 0, 0.9);
 }
 header
 {
@@ -227,35 +231,39 @@ header .logo
 
 .container
 {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items:center ;
-    flex-wrap: wrap;
+    align-items: center;
     padding: 40px 0;
+    flex-wrap: wrap;
 }
 .container .box
 {
     position: relative;
     width: 320px;
     height: 400px;
+    color: white;
+    background: #111;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 30px;
-    transition: 0.5s;
+    margin: 20px 30px;
+    transition:  0.5s;
+}
+.container .box:hover
+{
+    transform: translateY(-20px);
 }
 .container .box::before
 {
     content: '';
     position: absolute;
     top: 0;
-    left: 50px;
-    width: 50%;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background: #fff;
-    border-radius: 8px;
-    transform: skewX(15deg);
-    transition: 0.5s;
+    /*background: linear-gradient(0deg, #ffbc00, #ff0058);*/
 }
 
 .container .box::after
@@ -263,74 +271,21 @@ header .logo
     content: '';
     position: absolute;
     top: 0;
-    left: 50px;
-    width: 50%;
-    height: 100%;
-    background: #fff;
-    border-radius: 8px;
-    transform: skewX(15deg);
-    transition: 0.5s;
-    filter: blur(30px);
-    transition: 0.5s;
-}
-.container .box:hover:before,
-.container .box:hover:after
-{
-    transform: skew(0deg);
-    left: 20px;
-    width: calc(100% - 90px);
-}
-
-.container .box:nth-child(1):before,
-.container .box:nth-child(1):after
-{
-    background: linear-gradient(315deg, #ffbc00, #ff0058);
-}
-.container .box:nth-child(2):before,
-.container .box:nth-child(2):after
-{
-    background: linear-gradient(315deg, #00d0ff, #ff0058);
-}
-.container .box:nth-child(3):before,
-.container .box:nth-child(3):after
-{
-    background: linear-gradient(315deg, #69ca43, #00d0ff);
-}
-.container .box:nth-child(4):before,
-.container .box:nth-child(4):after
-{
-    background: linear-gradient(315deg, #d47a05, #c7127c);
-}
-.container .box:nth-child(5):before,
-.container .box:nth-child(5):after
-{
-    background: linear-gradient(315deg, #131412, #00d0ff);
-}
-.container .box:nth-child(6):before,
-.container .box:nth-child(6):after
-{
-    background: linear-gradient(315deg, #69ca43, #e30eff);
-}
-.container .box:nth-child(7):before,
-.container .box:nth-child(7):after
-{
-    background: linear-gradient(315deg, #eedf10, #2600ff);
-}
-.container .box:nth-child(8):before,
-.container .box:nth-child(8):after
-{
-    background: linear-gradient(315deg, #006eff, #ff0000);
-}
-.container .box span
-{
-    display: block;
-    position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: var(--naranja);
+    filter: blur(6px);
+}
+.container .box span        /*borde*/
+{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: var(--relleno);
+    z-index: 2;
 }
 .container .box span::before
 {
@@ -338,102 +293,41 @@ header .logo
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transition: 0.5s;
-    animation: animate 2s ease-in-out infinite;
-    box-shadow: 0 5px 15px rgba(0, 0, 0,0.5);
-}
-.container .box:hover span::before
-{
-    top: -50px;
-    left: 50px;
-    width: 100px;
-    height: 100px;
-    opacity: 1;
-}
-.container .box span::after
-{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transition: 0.5s;
-    animation: animate 2s ease-in-out infinite;
-    box-shadow: 0 5px 15px rgba(0, 0, 0,0.5);
-    animation-delay: 1s;
-}
-.container .box:hover span::after
-{
-    bottom: -50px;
-    right: 50px;
-    width: 100px;
-    height: 100px;
-    opacity: 1;
-}
-@keyframes animate{
-    0%,100%
-    {
-        transform: translateY(10px);
-    }
-    50%
-    {
-        transform: translateY(-10px);
-    }
-
+    /*background: rgba(255, 255, 255, 0.1);  Linea que no le gusta a Josu*/
+    pointer-events: none;
 }
 .container .box .content
 {
     position: relative;
-    left: 0;
+    z-index: 10;
     padding: 20px 40px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    z-index: 1;
-    transition: 0.5s;
-    color: #fff;
-    /*display: none;*/
-}
-.container .box:hover .content
-{
-    left: -25px;
-    padding: 60px 40px;
 }
 
-.container .box .content h2
+.container .box .content h2 /*TITULO*/
 {
     font-size: 2em;
-    color: #fff;
+    color: var(--black);
     margin-bottom: 10px;
 }
-.container .box .content p
+.container .box .content p /*relleno solo letras*/
 {
     font-size: 1.1em;
+    color: var(--black);
     margin-bottom: 10px;
     line-height: 1.4em;
 }
-.container .box .content a
+.container .box .content a /*repositorio*/
 {
     display: inline-block;
     font-size: 1.1em;
     color: #111;
-    background: #fff;
+    background: white;
     padding: 10px;
-    border-radius: 4px;
     text-decoration: none;
     font-weight: 700;
-    margin-top: 5px;
+
 }
 body
 {
