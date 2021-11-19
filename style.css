@@ -123,14 +123,11 @@ header .logo
     mix-blend-mode: multiply;
 }
 .main h2{
-    font-family:Damned;
     position: relative;
     z-index: 3;
     left: -30px;
     bottom: -30px;
     font-size: 5vw;
-    color: #fff;
-    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.88);
 }
 
 .navigation
@@ -219,11 +216,11 @@ header .logo
     }
     .sci{
         position: absolute;
-    left: 10px;
-    bottom:70px;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
+        left: 10px;
+        bottom:70px;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
         
     }
 }
