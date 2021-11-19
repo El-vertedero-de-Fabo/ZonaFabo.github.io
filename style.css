@@ -198,13 +198,17 @@ header .logo
 }
 @media (max-width: 768px)
 {
+
     h2 .imagenNueva{
         
-        width: 400px;
-        height: 100%;
         
+        position: inherit;
+        left: 15px;
+        bottom: 20px;
         
+        width:190px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
     }
+
     header{
         padding: 20px;
     }
