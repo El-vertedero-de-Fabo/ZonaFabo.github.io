@@ -127,7 +127,7 @@ header .logo
     position: relative;
     z-index: 3;
     left: -30px;
-    bottom: 50px;
+    bottom: -30px;
     font-size: 5vw;
     color: #fff;
     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.88);
@@ -198,6 +198,13 @@ header .logo
 }
 @media (max-width: 768px)
 {
+    h2 .imagenNueva{
+        
+        width: 400px;
+        height: 100%;
+        
+        
+    }
     header{
         padding: 20px;
     }
