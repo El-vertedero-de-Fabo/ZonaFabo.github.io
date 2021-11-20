@@ -26,8 +26,9 @@ header
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 40px 100px;
+    padding: 10px 100px;
     z-index: 100;
+    
     
 }
 header .logo        /*edicion del logo*/
@@ -39,6 +40,7 @@ header .logo        /*edicion del logo*/
     font-size: 2em;
     font-weight: 700;
     letter-spacing: 0.5em;
+    
 }
 /*
 header .logo       
@@ -200,17 +202,26 @@ header .logo
     color: var(--black);
     font-size: 1.75em;
 }
+h2 .imagenNueva{
+        
+        
+    position: center;
+    left: 60px;
+    bottom: 20px;
+    
+    width:440px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
+}
 @media (max-width: 768px)
 {
 
     h2 .imagenNueva{
         
         
-        position: inherit;
-        left: 15px;
+        position: relative;
+        left: 60px;
         bottom: 20px;
         
-        width:190px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
+        width:130px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
     }
 
     header{
