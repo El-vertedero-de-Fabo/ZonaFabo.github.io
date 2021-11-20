@@ -17,7 +17,7 @@
     --black: #fff;
     --white: rgb(0, 0, 0);
     --naranja: linear-gradient(395deg, #fffefb, #ffffff);
-    --relleno:rgba(0, 0, 0, 0.9);
+    --relleno:rgba(14, 13, 13, 0.9);
 }
 header
 {
@@ -27,7 +27,8 @@ header
     align-items: center;
     width: 100%;
     padding: 40px 100px;
-    z-index: 10000;
+    z-index: 100;
+    
 }
 header .logo        /*edicion del logo*/
 {
@@ -116,11 +117,13 @@ header .logo
     z-index: 2;
     user-select: none;
     mix-blend-mode: screen;
+    
 }
 .dark .mask{
-    filter: invert(1);
+    filter: invert(100%);
     
     mix-blend-mode: multiply;
+    
 }
 .dark .logo{
     filter: invert(1);
@@ -169,16 +172,16 @@ header .logo
     background: var(--black);
     color: var(--white);
 }
-.copyrightText
+/*.copyrightText
 {
     position: absolute;
     left: 100px;
-    bottom: 40px;
+    bottom: 0px;
     z-index: 4;
     font-weight: 500;
     font-size: 1.2em;
     color: var(--black);
-}
+}*/
 .sci{
     position: absolute;
     left: 50px;
