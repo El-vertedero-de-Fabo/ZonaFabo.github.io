@@ -6,6 +6,27 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 0.8rem;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 :root
 {
     --black: rgb(0, 0, 0);
